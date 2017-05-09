@@ -1,14 +1,16 @@
-	var pregunta1 = prompt("Cual es tu peso");
-	var pregunta2= prompt("Cual es tu estatura");
-	var peso= pregunta1;
-	var estatura= pregunta2;
-
-	function mostrar(){
-		var calculadora = (peso/(estatura*estatura));
-		calculadora = calculadora.toFixed(2);
-		
-		calculo.innerHTML = "Tu peso es: " + calculadora;
-	}
-
-	mostrar();
+function calculadorimc(){
+	var calculadora = document.getElementById("calculadora");
+	var peso = document.getElementById("peso").value;
+	var altura = document.getElementById("altura").value;
 	
+	if( peso != "" && altura != "" ){
+		altura = parseInt(altura) / 100;
+		var imc = peso / (altura * altura);
+		calculadora.innerHTML += "<p>con tu estatura de:" + altura + " cm." + "<br>" + "Y tu peso de: "+ peso + " kgs" + "<br>" + "tu índice de masa corporal es " + imc.toFixed(2) + "." "</p>";
+	}
+	
+	peso = "";
+	altura = "";
+};
+
+calculadora();
