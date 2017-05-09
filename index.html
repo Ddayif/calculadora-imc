@@ -3,9 +3,27 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Calular IMC</title>
+	
 </head>
 <body>
-	<div id="calculo"></div>
-	<script type="text/javascript" src="js/main.js"></script>
+
+	<h1><font color="#04B404">Calcule su indice de masa corporal</font></h1>
+	<form>
+		<div>
+			<p><strong>Ingrese su peso</strong></p>
+			<input id="peso" placeholder="Peso..." autofocus="">
+		</div>
+
+		<div>
+			<p><strong>Ingrese su estatura</strong></p>
+			<input id="estatura" placeholder="Estatura...">
+		</div><br>
+
+		<div class="button">
+			<button class="btn btn-lg btn-primary btn-block submit-btn" onclick="Convertir();">IMC</button>
+		</div>
+		<img src="assets/imagen/Tabla-IMC.jpg">
+	</form>
+	<script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>
